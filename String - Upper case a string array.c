@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char country[11] = {'B', 'a', 'n', 'g', 'l', 'a', 'd', 'e', 's', 'h', '\0'};
+    int i, length;
+    printf("%s\n", country);
+    length = 10;
+
+    for(i = 0; i < length; i++){
+        if(country[i] >= 97 && country[i] <= 122){
+            country[i] = 'A' + (country[i] - 'a');
+        }
+    }
+    printf("%s\n", country);
+    return 0;
+}
